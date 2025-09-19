@@ -12,8 +12,5 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY MultiGroupMsgReader.py .
 
-# Copy linked account (from Render Secret Files)
-COPY /etc/secrets/accounts.json /home/.local/share/signal-cli/data/accounts.json
-
 # Start both services: signal-cli-rest-api + Python script
 CMD ["sh", "-c", "signal-cli-rest-api & python3 MultiGroupMsgReader.py"]
