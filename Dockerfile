@@ -10,7 +10,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-COPY MultiGroupMsgReader.py 
+COPY MultiGroupMsgReader.py .
 
 # Start both services: signal-cli-rest-api + Python script
 CMD ["sh", "-c", "signal-cli-rest-api & python3 MultiGroupMsgReader.py"]
