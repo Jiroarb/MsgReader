@@ -53,4 +53,5 @@ async def handler(event):
 
 # === Run client ===
 with client:
+    print("Starting python")
     client.run_until_disconnected()
