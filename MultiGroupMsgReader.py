@@ -3,7 +3,9 @@ import requests
 from telethon import TelegramClient, events
 
 # === Load config ===
-with open("config.yaml", "r") as f:
+config_path = "/etc/secrets/config.yaml"
+
+with open(config_path, "r") as f:
     config = yaml.safe_load(f)
 
 api_id = int(config["telegram"]["api_id"])
