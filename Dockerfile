@@ -6,7 +6,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
-COPY myscript.py config.yaml .
+COPY MultiGroupMsgReader.py config.yaml .
 
 # Start both services
-CMD ["sh", "-c", "signal-cli-rest-api & python3 myscript.py"]
+CMD ["sh", "-c", "signal-cli-rest-api & python3 MultiGroupMsgReader.py"]
