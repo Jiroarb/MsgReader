@@ -1,0 +1,21 @@
+telegram:
+  api_id: 123456
+  api_hash: "abcdef123456"
+  phone: "+1234567890"
+
+routes:
+  - source: "https://t.me/mygroup1"
+    signal:
+      number: "+11111111111"     # your Signal-registered number
+      recipients:
+        - "+19999999999"         # contact or group ID
+    telegram_channels:
+      - "@my_broadcast_channel1"
+
+  - source: "https://t.me/mygroup2"
+    signal:
+      number: "+11111111111"
+      recipients:
+        - "+18888888888"
+    telegram_channels:
+      - "@my_broadcast_channel2"
