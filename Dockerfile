@@ -1,7 +1,7 @@
 FROM bbernhard/signal-cli-rest-api:latest
 
 # Install Python & pip (Debian-based image)
-RUN apt-get update && 
+RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
     rm -rf /var/lib/apt/lists/*
 
