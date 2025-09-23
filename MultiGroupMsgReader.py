@@ -13,6 +13,8 @@ logging.getLogger("telethon").setLevel(logging.DEBUG)
 
 # === Load config ===
 config_path = "/etc/secrets/config.yaml"
+session = "/etc/secrets/my_account.session"
+
 
 with open(config_path, "r") as f:
     config = yaml.safe_load(f)
@@ -21,7 +23,7 @@ api_id = int(config["telegram"]["api_id"])
 api_hash = config["telegram"]["api_hash"]
 phone = config["telegram"]["phone"]
 
-client = TelegramClient("my_account", api_id, api_hash)
+client = TelegramClient(session, api_id, api_hash)
 
 # Prepare routes
 routes = {r["source"]: r for r in config["routes"]}
