@@ -9,6 +9,7 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
+logging.getLogger("telethon").setLevel(logging.DEBUG)
 
 # === Load config ===
 config_path = "/etc/secrets/config.yaml"
@@ -69,4 +70,5 @@ async def handler(event):
 # === Run client ===
 with client:
     print("Starting python")
+    logger.info("Starting python")
     client.run_until_disconnected()
