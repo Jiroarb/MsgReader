@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: MsgReader
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile  # This is the path to your Dockerfile, which is in the root directory.
